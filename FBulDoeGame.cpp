@@ -3,7 +3,7 @@
 
 
 
-int __DEBUG__{ 1 }; // NOTE: **** set this to 0 if not debugging ****
+int __DEBUG__{ 0 }; // NOTE: **** set this to 0 if not debugging ****
 
 
 
