@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{2EEB07FB-9EB1-48D7-ADBE-D00965812BD3}</ProjectGuid>
+    <ProjectGuid>{491EDC19-343E-4B66-AAC5-EBC9C0598C2D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>BullCowGame</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
