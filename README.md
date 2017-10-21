@@ -11,5 +11,7 @@ link: https://github.com/UnrealCourse/02_BullCowGame/tree/master/BullCowGame
 4. We read both ASCII arts from files.
 5. We now get a random word from a words file isograms.txt, you can add as many words as you prefer.
 
+
 ### TODO
 1. Word length selection option to user.
+2. Add in more exceptions.

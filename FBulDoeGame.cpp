@@ -3,7 +3,7 @@
 
 
 
-int __DEBUG__{ 1 }; // NOTE: **** set this to 0 if not debugging ****
+int __DEBUG__{ 0 }; // NOTE: **** set this to 0 if not debugging ****
 
 
 
@@ -57,22 +57,22 @@ void FBuckDoeGame::Reset()
 // recieves a VALID guess, increments turn, and returns count.
 FBuckDoeCount FBuckDoeGame::SubmitValidGuess(FString Guess)
 {	
-	FBuckDoeCount BullCowCount;	
+	FBuckDoeCount BuckDoeCount;	
 	++MyCurrentTry;
 
 	for (int32 i{ 0 }; i < GetHiddenWordLength(); ++i)
 	{		
 		if (Guess[i] == MyHiddenWord[i])
-			++(BullCowCount.Bulls);
+			++(BuckDoeCount.Bulls);
 		else if (RJ::IndexOf(MyHiddenWord, Guess[i]) > -1)
-			++(BullCowCount.Cows);
+			++(BuckDoeCount.Cows);
 	}
 
 	// end game if guessed 'em all right
-	if (BullCowCount.Bulls == GetHiddenWordLength())
+	if (BuckDoeCount.Bulls == GetHiddenWordLength())
 		bGameWon = true;		
 
-	return BullCowCount;
+	return BuckDoeCount;
 }
 
 
