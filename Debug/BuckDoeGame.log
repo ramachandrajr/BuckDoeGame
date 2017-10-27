@@ -1,4 +1,3 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(387,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (BullCowGame.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-  FBulDoeGame.cpp
-  BuckDoeGame.vcxproj -> C:\Users\Dell\Documents\Unreal Projects\Section_02\Debug\BuckDoeGame.exe
-  BuckDoeGame.vcxproj -> C:\Users\Dell\Documents\Unreal Projects\Section_02\Debug\BuckDoeGame.pdb (Partial PDB)
+  BuckDoeGame.vcxproj -> D:\code\Unreal Projects\Section_02\Debug\BuckDoeGame.exe
+  BuckDoeGame.vcxproj -> D:\code\Unreal Projects\Section_02\Debug\BuckDoeGame.pdb (Partial PDB)

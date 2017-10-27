@@ -4,6 +4,7 @@
 #include <fstream>
 #include <string>
 #include <map> 
+#include <vector>
 #include <cmath>
 #include <cstdlib> // srand, rand
 #include <ctime> // time
@@ -67,7 +68,7 @@ private:
 	// see constructor for init.
 	int32 MyCurrentTry;
 	FString MyHiddenWord;
-	FString *Isograms;
+    std::vector<std::string> Isograms;
 	int32 IsogramArrSize;
 	bool bGameWon;
 

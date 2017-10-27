@@ -118,38 +118,38 @@ bool FBuckDoeGame::IsLowercase(FString Guess) const
  */
 void FBuckDoeGame::InitIsogramArray()
 {	
-	int numIsos{ 0 };
-	std::string numIsosAsText{};	
-	std::fstream isosFile = std::fstream("isograms.txt", std::ios::ios_base::in);
+    int numIsos{ 0 };
+    std::string numIsosAsText{};
+    std::fstream isosFile = std::fstream("isograms.txt", std::ios::ios_base::in);
 
-	// if file not found
-	if (! isosFile.is_open())
-	{
-		Isograms = new std::string[4]{ "aftershock", "brick", "stumped", "filmography"};
-		this->IsogramArrSize = 4;
-		return;
-	}
+    // if file not found
+    if (!isosFile.is_open())
+    {
+        Isograms = { "aftershock", "brick", "stumped", "filmography" };
+        IsogramArrSize = 4;
+        return;
+    }
 
 
-	// ######## get number of isograms ########
-	std::getline(isosFile, numIsosAsText, '\n'); // firstline == number of isos in file
-	numIsos = atoi(numIsosAsText.c_str());
-	this->Isograms = new FString[numIsos]{};
-	
+    // ######## get number of isograms ########
+    std::getline(isosFile, numIsosAsText, '\n'); // firstline == number of isos in file
+    numIsos = atoi(numIsosAsText.c_str());
+    this->Isograms.reserve(numIsos);
+    
 
-	// ######## read in isograms ########
-	for (int i{ 0 }; i < numIsos; ++i)
-	{
-		std::string line{};
-		std::getline(isosFile, line, '\n');
-		if (isosFile.eof() || isosFile.bad()) { break; }
+    // ######## read in isograms ########
+    for (int i{ 0 }; i < numIsos; ++i)
+    {
+        std::string line{};
+        std::getline(isosFile, line, '\n');
+        if (isosFile.eof() || isosFile.bad()) { break; }
+        this->Isograms.push_back(std::move(line));
+    }
+    
 
-		if (line.length() > 0) { Isograms[i] = line; }
-	}
+    this->IsogramArrSize = numIsos;
 
-	
-	this->IsogramArrSize = numIsos;
-	return;
+    return;
 }
 
 
